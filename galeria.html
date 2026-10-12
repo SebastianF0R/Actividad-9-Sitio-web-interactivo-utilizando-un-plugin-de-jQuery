@@ -11,9 +11,11 @@
     <title>Galería | Brasa & Olivo</title>
 
     <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/estilos.css">
 
     <script defer src="js/jquery-3.7.1.min.js"></script>
+    <script defer src="js/jquery.bxslider.min.js"></script>
     <script defer src="js/app.js"></script>
     <script defer src="js/interacciones.js"></script>
 </head>
@@ -56,6 +58,14 @@
             Selecciona una imagen para ampliarla.
         </p>
 
+        <section aria-label="Carrusel de sabores italianos">
+            <ul class="bxslider">
+                <li><img src="images/mesa-italiana.jpg" alt="Mesa italiana para compartir" title="Una mesa para compartir"></li>
+                <li><img class="crop-left" src="images/mesa-italiana.jpg" alt="Recorte de la pizza" title="Pizza del horno a la mesa"></li>
+                <li><img class="crop-right" src="images/mesa-italiana.jpg" alt="Recorte de la pasta" title="Sabores italianos"></li>
+            </ul>
+            <p id="estado-slider" role="status">Galería de sabores italianos</p>
+        </section>
         <div class="gallery">
             <button class="photo" data-position="center">
                 <img
