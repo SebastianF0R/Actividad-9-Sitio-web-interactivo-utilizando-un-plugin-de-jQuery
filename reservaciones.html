@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Brasa & Olivo: menú, galería y reservaciones de un restaurante italiano ficticio."
+    >
+
+    <title>Reservaciones | Brasa & Olivo</title>
+
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script defer src="js/jquery-3.7.1.min.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/interacciones.js"></script>
+</head>
+
+<body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <a class="brand" href="index.html">brasa <em>&</em> olivo<span>CUCINA ITALIANA</span></a>
+
+        <button
+            id="abrir-menu"
+            aria-controls="navegacion"
+            aria-expanded="false"
+        >
+            Menú
+        </button>
+
+        <nav id="navegacion" aria-label="Principal">
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="galeria.html">Galería</a>
+            <a href="reservaciones.html" aria-current="page">
+                Reservaciones
+            </a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button id="tema" aria-label="Activar tema oscuro">
+            Tema oscuro
+        </button>
+    </header>
+
+    <main id="contenido">
+        <p class="eyebrow">GUARDA UN LUGAR</p>
+
+        <h1>Tu próxima reunión</h1>
+
+        <div class="split">
+            <form id="reserva" class="panel" novalidate>
+                <h2>Reservar una mesa</h2>
+
+                <p>
+                    Completa los datos para generar una solicitud de demostración.
+                </p>
+
+                <label for="nombre">Nombre completo</label>
+                <input
+                    id="nombre"
+                    name="nombre"
+                    autocomplete="name"
+                    required
+                    minlength="3"
+                >
+
+                <label for="correo">Correo electrónico</label>
+                <input
+                    id="correo"
+                    name="correo"
+                    type="email"
+                    autocomplete="email"
+                    required
+                >
+
+                <div class="form-grid">
+                    <div>
+                        <label for="fecha">Fecha</label>
+                        <input
+                            id="fecha"
+                            name="fecha"
+                            type="date"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="hora">Hora</label>
+                        <select id="hora" name="hora">
+                            <option>13:00</option>
+                            <option>15:00</option>
+                            <option>17:00</option>
+                            <option>19:00</option>
+                            <option>21:00</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="personas">Número de personas (1 a 12)</label>
+                <input
+                    id="personas"
+                    name="personas"
+                    type="number"
+                    min="1"
+                    max="12"
+                    value="2"
+                    required
+                >
+
+                <label for="notas">Comentarios (opcional)</label>
+                <textarea
+                    id="notas"
+                    name="notas"
+                    rows="3"
+                    maxlength="300"
+                ></textarea>
+
+                <button type="submit" class="button">
+                    Generar solicitud
+                </button>
+
+                <p id="resultado" role="status" aria-live="polite"></p>
+            </form>
+
+            <aside>
+                <h2>Antes de reservar</h2>
+
+                <p>
+                    Horario de cocina: martes a domingo, de 13:00 a 22:00.
+                    Los lunes descansamos.
+                </p>
+
+                <p>
+                    Para grupos de más de 12 personas, consulta la página
+                    de contacto.
+                </p>
+
+                <p class="notice">
+                    Sitio académico de un restaurante ficticio.
+                    La solicitud se muestra en pantalla y no se envía
+                    a un restaurante.
+                </p>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <span class="footer-brand">brasa & olivo</span>
+        <span>Querétaro · Cocina italiana</span>
+        <small>Proyecto académico · Restaurante ficticio</small>
+    </footer>
+</body>
+</html>

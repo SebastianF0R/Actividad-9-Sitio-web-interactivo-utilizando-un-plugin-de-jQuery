@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Brasa & Olivo: menú, galería y reservaciones de un restaurante italiano ficticio."
+    >
+
+    <title>Inicio | Brasa & Olivo</title>
+
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script defer src="js/jquery-3.7.1.min.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/interacciones.js"></script>
+</head>
+
+<body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <a class="brand" href="index.html">brasa <em>&</em> olivo<span>CUCINA ITALIANA</span></a>
+
+        <button
+            id="abrir-menu"
+            aria-controls="navegacion"
+            aria-expanded="false"
+        >
+            Menú
+        </button>
+
+        <nav id="navegacion" aria-label="Principal">
+            <a href="index.html" aria-current="page">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="galeria.html">Galería</a>
+            <a href="reservaciones.html">Reservaciones</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button id="tema" aria-label="Activar tema oscuro">
+            Tema oscuro
+        </button>
+    </header>
+
+    <main id="contenido">
+        <section class="hero">
+            <div>
+                <p class="eyebrow">COCINA ITALIANA · QUERÉTARO</p>
+
+                <h1>
+                    Buenas historias.<br>
+                    Mejor comida.
+                </h1>
+
+                <p>
+                    Pizza al horno, pasta y una mesa para compartir.
+                    Disfruta los pequeños momentos con el sabor de nuestra cocina.
+                </p>
+
+                <a class="button" href="menu.html">
+                    Explorar el menú
+                </a>
+
+                <a class="text-link" href="reservaciones.html">
+                    Reservar una mesa
+                </a>
+            </div>
+
+            <img
+                src="images/mesa-italiana.jpg"
+                alt="Pizza y pasta con tomates y albahaca en una mesa"
+            >
+        </section>
+
+        <section class="band">
+            <span>Ingredientes frescos</span>
+            <span>Recetas para compartir</span>
+            <span>Hecho al momento</span>
+        </section>
+
+        <section class="split">
+            <div>
+                <p class="eyebrow">NUESTRA MESA</p>
+
+                <h2>Un lugar para volver.</h2>
+
+                <p>
+                    Brasa & Olivo nace de una idea sencilla: reunirse alrededor
+                    de una buena comida. Nuestra propuesta combina pizzas,
+                    pastas y entradas con sabores mediterráneos.
+                </p>
+            </div>
+
+            <div class="panel">
+                <h3>Planea tu visita</h3>
+
+                <p>Martes a domingo · 13:00 a 22:00</p>
+
+                <p>
+                    Consulta los platillos y calcula tu consumo antes de reservar.
+                </p>
+
+                <a href="contacto.html">
+                    Ver información de contacto
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span class="footer-brand">brasa & olivo</span>
+        <span>Querétaro · Cocina italiana</span>
+        <small>Proyecto académico · Restaurante ficticio</small>
+    </footer>
+</body>
+</html>

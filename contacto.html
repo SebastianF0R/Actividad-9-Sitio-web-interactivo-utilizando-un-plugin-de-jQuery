@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Brasa & Olivo: menú, galería y reservaciones de un restaurante italiano ficticio."
+    >
+
+    <title>Contacto | Brasa & Olivo</title>
+
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script defer src="js/jquery-3.7.1.min.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/interacciones.js"></script>
+</head>
+
+<body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <a class="brand" href="index.html">brasa <em>&</em> olivo<span>CUCINA ITALIANA</span></a>
+
+        <button
+            id="abrir-menu"
+            aria-controls="navegacion"
+            aria-expanded="false"
+        >
+            Menú
+        </button>
+
+        <nav id="navegacion" aria-label="Principal">
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="galeria.html">Galería</a>
+            <a href="reservaciones.html">Reservaciones</a>
+            <a href="contacto.html" aria-current="page">Contacto</a>
+        </nav>
+
+        <button id="tema" aria-label="Activar tema oscuro">
+            Tema oscuro
+        </button>
+    </header>
+
+    <main id="contenido">
+        <p class="eyebrow">SIGAMOS CONVERSANDO</p>
+
+        <h1>Nos vemos a la mesa.</h1>
+
+        <div class="split">
+            <div class="panel">
+                <h2>Visítanos</h2>
+
+                <p>Querétaro, México</p>
+                <p>Martes a domingo · 13:00 a 22:00</p>
+                <p>Lunes cerrado.</p>
+
+                <p>
+                    Para planear tu visita, consulta nuestro menú y genera
+                    una solicitud en Reservaciones.
+                </p>
+
+                <a class="button" href="reservaciones.html">
+                    Ir a reservaciones
+                </a>
+
+                <p class="notice">
+                    Brasa & Olivo es una marca ficticia creada para este
+                    proyecto académico; no tiene dirección física ni
+                    atención comercial.
+                </p>
+            </div>
+
+            <section>
+                <h2>Preguntas frecuentes</h2>
+
+                <div class="faq">
+                    <button aria-expanded="false">
+                        ¿Hay opciones vegetarianas?
+                    </button>
+
+                    <div hidden>
+                        <p>
+                            Sí. La pizza margarita y la ensalada mediterránea
+                            no incluyen carne. Revisa los ingredientes
+                            antes de elegir.
+                        </p>
+                    </div>
+
+                    <button aria-expanded="false">
+                        ¿Puedo calcular mi consumo?
+                    </button>
+
+                    <div hidden>
+                        <p>
+                            Sí. Agrega platillos en la página Menú y selecciona
+                            una propina opcional para ver el total estimado.
+                        </p>
+                    </div>
+
+                    <button aria-expanded="false">
+                        ¿La reservación es real?
+                    </button>
+
+                    <div hidden>
+                        <p>
+                            No. El formulario valida tus datos y genera una
+                            confirmación de demostración en pantalla.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <span class="footer-brand">brasa & olivo</span>
+        <span>Querétaro · Cocina italiana</span>
+        <small>Proyecto académico · Restaurante ficticio</small>
+    </footer>
+</body>
+</html>

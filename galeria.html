@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Brasa & Olivo: menú, galería y reservaciones de un restaurante italiano ficticio."
+    >
+
+    <title>Galería | Brasa & Olivo</title>
+
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script defer src="js/jquery-3.7.1.min.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/interacciones.js"></script>
+</head>
+
+<body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <a class="brand" href="index.html">brasa <em>&</em> olivo<span>CUCINA ITALIANA</span></a>
+
+        <button
+            id="abrir-menu"
+            aria-controls="navegacion"
+            aria-expanded="false"
+        >
+            Menú
+        </button>
+
+        <nav id="navegacion" aria-label="Principal">
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="galeria.html" aria-current="page">Galería</a>
+            <a href="reservaciones.html">Reservaciones</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button id="tema" aria-label="Activar tema oscuro">
+            Tema oscuro
+        </button>
+    </header>
+
+    <main id="contenido">
+        <p class="eyebrow">SABORES EN PRIMER PLANO</p>
+
+        <h1>Desde nuestra mesa</h1>
+
+        <p>
+            Una selección de detalles de la cocina italiana.
+            Selecciona una imagen para ampliarla.
+        </p>
+
+        <div class="gallery">
+            <button class="photo" data-position="center">
+                <img
+                    src="images/mesa-italiana.jpg"
+                    alt="Mesa con pizza y pasta"
+                >
+                <span>Para compartir</span>
+            </button>
+
+            <button class="photo" data-position="left">
+                <img
+                    class="crop-left"
+                    src="images/mesa-italiana.jpg"
+                    alt="Detalle de la pizza"
+                >
+                <span>Del horno a la mesa</span>
+            </button>
+
+            <button class="photo" data-position="right">
+                <img
+                    class="crop-right"
+                    src="images/mesa-italiana.jpg"
+                    alt="Detalle de la pasta"
+                >
+                <span>Sabores italianos</span>
+            </button>
+        </div>
+
+        <p class="credit">
+            Fotografía ilustrativa: Vincent Rivaud / Pexels.
+            Las vistas usan distintos recortes de la misma fotografía.
+        </p>
+
+        <dialog id="visor">
+            <button id="cerrar-visor" aria-label="Cerrar imagen">
+                Cerrar
+            </button>
+
+            <img
+                src="images/mesa-italiana.jpg"
+                alt="Fotografía ampliada de una mesa italiana"
+            >
+
+            <p id="pie-foto"></p>
+        </dialog>
+    </main>
+
+    <footer>
+        <span class="footer-brand">brasa & olivo</span>
+        <span>Querétaro · Cocina italiana</span>
+        <small>Proyecto académico · Restaurante ficticio</small>
+    </footer>
+</body>
+</html>
