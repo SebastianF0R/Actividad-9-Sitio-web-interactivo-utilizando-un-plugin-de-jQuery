@@ -34,6 +34,7 @@
 
         <nav id="navegacion" aria-label="Principal">
             <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
             <a href="menu.html">Menú</a>
             <a href="galeria.html">Galería</a>
             <a href="reservaciones.html">Reservaciones</a>
@@ -114,12 +115,33 @@
                 </div>
             </section>
         </div>
+        <section class="split contact-area">
+            <div class="panel">
+                <h2>Escríbenos</h2>
+                <p>Formulario de demostración: los datos no se envían a un servidor.</p>
+                <form id="contacto-form" novalidate>
+                    <label for="contacto-nombre">Nombre</label><input id="contacto-nombre" name="nombre" required minlength="3" maxlength="80" autocomplete="name">
+                    <label for="contacto-correo">Correo</label><input id="contacto-correo" name="correo" type="email" required maxlength="120" autocomplete="email">
+                    <label for="contacto-asunto">Asunto</label><input id="contacto-asunto" name="asunto" required minlength="5" maxlength="120">
+                    <label for="contacto-mensaje">Mensaje</label><textarea id="contacto-mensaje" name="mensaje" required minlength="10" maxlength="1000" rows="5" aria-describedby="contador-mensaje"></textarea>
+                    <small id="contador-mensaje">0 / 1000 caracteres</small>
+                    <button type="submit">Validar mensaje</button>
+                    <p id="contacto-resultado" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+            <section><h2>Ubicación de demostración</h2><p>Jardín Zenea, Centro Histórico de Querétaro. Este punto ilustra la ubicación del proyecto; no corresponde a un restaurante real.</p>
+                <iframe class="mapa" title="Mapa interactivo: ubicación de demostración en Jardín Zenea" src="https://maps.google.com/maps?q=Jardin%20Zenea%20Queretaro&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Jardin+Zenea+Queretaro" target="_blank" rel="noopener">Abrir ubicación en Google Maps</a></p><small>El mapa necesita conexión a Internet.</small>
+            </section>
+        </section>
     </main>
 
     <footer>
         <span class="footer-brand">brasa & olivo</span>
         <span>Querétaro · Cocina italiana</span>
         <small>Proyecto académico · Restaurante ficticio</small>
+        <time id="reloj" aria-label="Fecha y hora actual en Querétaro"></time>
     </footer>
+    <button id="ir-arriba" type="button" hidden>↑ Ir arriba</button>
 </body>
 </html>

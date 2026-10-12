@@ -228,3 +228,48 @@ if (viewer) {
         }
     });
 }
+// Reloj: fecha y hora de Querétaro, actualizado cada segundo.
+const clock = document.getElementById("reloj");
+function updateClock() {
+    const now = new Date();
+    clock.dateTime = now.toISOString();
+    clock.textContent = new Intl.DateTimeFormat("es-MX", {
+        timeZone: "America/Mexico_City", dateStyle: "full", timeStyle: "medium"
+    }).format(now);
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+// Se muestra al desplazarse; respeta la preferencia de movimiento reducido.
+const topButton = document.getElementById("ir-arriba");
+function showTopButton() { topButton.hidden = window.scrollY < 250; }
+window.addEventListener("scroll", showTopButton, { passive: true });
+showTopButton();
+topButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+});
+
+// Validación JavaScript: recorta espacios y muestra el primer error.
+const contactForm = document.getElementById("contacto-form");
+if (contactForm) {
+    contactForm.addEventListener("submit", event => {
+        event.preventDefault();
+        const rules = [
+            ["nombre", value => value.length >= 3 && value.length <= 80, "Escribe un nombre de 3 a 80 caracteres."],
+            ["correo", value => value.length <= 120 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value), "Escribe un correo electrónico válido."],
+            ["asunto", value => value.length >= 5 && value.length <= 120, "El asunto debe tener entre 5 y 120 caracteres."],
+            ["mensaje", value => value.length >= 10 && value.length <= 1000, "El mensaje debe tener entre 10 y 1000 caracteres."]
+        ];
+        let firstError = null;
+        for (const [name, valid, message] of rules) {
+            const field = contactForm.elements.namedItem(name);
+            const ok = valid(field.value.trim());
+            field.setAttribute("aria-invalid", String(!ok));
+            if (!ok && !firstError) firstError = { field, message };
+        }
+        const result = document.getElementById("contacto-resultado");
+        result.className = firstError ? "error" : "success";
+        result.textContent = firstError ? firstError.message : "Mensaje validado correctamente. Demostración: no se ha enviado ningún correo.";
+        if (firstError) firstError.field.focus();
+    });
+}

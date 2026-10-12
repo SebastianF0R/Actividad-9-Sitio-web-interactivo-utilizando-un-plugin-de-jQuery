@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Brasa & Olivo: menú, galería y reservaciones de un restaurante italiano ficticio."
+    >
+
+    <title>Nosotros | Brasa & Olivo</title>
+
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script defer src="js/jquery-3.7.1.min.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/interacciones.js"></script>
+</head>
+
+<body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header>
+        <a class="brand" href="index.html">brasa <em>&</em> olivo<span>CUCINA ITALIANA</span></a>
+
+        <button
+            id="abrir-menu"
+            aria-controls="navegacion"
+            aria-expanded="false"
+        >
+            Menú
+        </button>
+
+        <nav id="navegacion" aria-label="Principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html" aria-current="page">Nosotros</a>
+            <a href="menu.html">Menú</a>
+            <a href="galeria.html">Galería</a>
+            <a href="reservaciones.html">Reservaciones</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <button id="tema" aria-label="Activar tema oscuro">
+            Tema oscuro
+        </button>
+    </header>
+
+    <main id="contenido">
+        <p class="eyebrow">NUESTRA HISTORIA</p>
+        <h1>Una mesa para compartir.</h1>
+        <section class="split">
+            <div><h2>Nosotros</h2><p>Brasa &amp; Olivo es una propuesta de restaurante italiano creada en Querétaro para este proyecto académico. Su concepto reúne recetas mediterráneas, ingredientes frescos y un ambiente cercano.</p><p>El sitio facilita consultar el menú, estimar el consumo y conocer la propuesta antes de una visita.</p></div>
+            <img class="about-photo" src="images/mesa-italiana.jpg" alt="Pizza y pasta para compartir">
+        </section>
+        <section class="cards">
+            <article class="panel"><h2>Misión</h2><p>Ofrecer una experiencia cálida alrededor de la cocina italiana y facilitar la planeación de cada visita.</p></article>
+            <article class="panel"><h2>Visión</h2><p>Ser un punto de encuentro para familias y amigos que disfrutan compartir una buena comida.</p></article>
+            <article class="panel"><h2>Valores</h2><p>Hospitalidad, cuidado de los ingredientes, atención cercana y respeto por las tradiciones culinarias.</p></article>
+        </section>
+    </main>
+
+    <footer>
+        <span class="footer-brand">brasa & olivo</span>
+        <span>Querétaro · Cocina italiana</span>
+        <small>Proyecto académico · Restaurante ficticio</small>
+        <time id="reloj" aria-label="Fecha y hora actual en Querétaro"></time>
+    </footer>
+    <button id="ir-arriba" type="button" hidden>↑ Ir arriba</button>
+</body>
+</html>
